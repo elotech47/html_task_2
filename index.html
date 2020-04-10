@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PiggyVest Login</title>
     <style>
-        body {
+body {
   background-color: #ADD8E6;
   background-repeat: no-repeat;
   background-position: right top;
@@ -17,76 +17,142 @@ div.container{
   background-color: #ffffff;
   border-width: 0px;
   border-radius: 25px 25px 25px 0px;
-  width: 350px;
+  width: 450px;
   padding: 20px 20px 20px 20px;
   box-sizing: border-box;
+  position: absolute;
   margin: 20px;
-  
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
 }
 
 
+.head_text{
+  color:white;
+  
+  font-weight: 900;
+}
+.button{
+  text-align: center;
+  font-size: large;
+  text-emphasis: size;
+  width: 100%;
+  border-radius: 10px 10px 10px 0px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  height : 60px;
+  background-color: blue;
+  color: white ;
+  cursor: pointer;
+}
+
+.input {
+  width: 100%;
+  border-radius: 10px 10px 10px 10px;
+  padding: 0px 0px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  height : 60px;
+  display: inline-block;
+  border: none;
+  background-color: #eeeef0;
+  color: white;
+}
+.select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #eeeef0;
+  color: black;
+}
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+.top_text{
+  text-align:center;
+  line-height:0.2;
+}
+
+.label {
+  text-align: "center";
+}
+
+
+/* visited link */
+a:visited {
+  color:white;
+}
+
+/* mouse over link */
+a:hover {
+  color: grey;
+}
+a{
+  top:20%;
+  position: absolute;
+  margin: 20px;
+  left: 50%;
+  top: 140%;
+  transform: translate(-50%, -50%);
+}
     </style>
 </head>
 
 <body>
-  <h1 class="heading-text" align="center">  piggyvest</h1>
-
+  
     <form action="/action_page.php" method="get" autocomplete="on">
-       <div class = "container" align= "center";>
+      <h1 class = "head_text" align="center">piggyvest</h1> 
+      <div class = "container" >
             <div class = "top_text">
             <p style="font-size:30px;"> Create a Secure Account</p>
             <p>Welcome to the future of savings & investment</p>
+            <br><br><br>
+            <p></p><br>
           </div>
-      <label for="fullname">First name:</label><br>
-      <input type="text" id = "fullname" name = "fullname"><br>
-      
-      <label for="email">Email:</label><br>
-      <input type="email" id = "email" name = "email"><br>
-      
-      <label for="pnumber">Phone Number:</label><br>
-      <input type="tel" id = "pnumber" name = "pnumber"  pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"><br>
-      
-      <label for="password">password:</label><br>
-      <input type="password" id = "password" name = "fpassword"><br>
-      
-      <label for="referral">Referral Phone or promo code (optional):</label><br>
-      <input type="number" id = "referral" name = "referral"><br>
-
-      <label for="fhow">How did you here about us (optional):</label><br>
-      <input list="source" name = "source">
-              <datalist id = "source">
-                <option value="Facebook">
-                  <option value="Twitter">
-                  <option value="Instagram">
-                  <option value="Friend/Family/CoWorker Referral">
-                  <option value="Google Search">
-                    <option value="Google Playstore">
-                      <option value="Online Blog">
-                        <option value="Local Newspaper">
-                          <option value="At an Event">
-                            <option value="Others">
-                           </datalist>
-              
+          <div class = "form" >
+      <label class = "label" for="fullname">First name</label><br>
+      <input class = "input" type="text" id = "fullname" name = "fullname" placeholder="Full Name"><br>
+        </br>
+      <label class = "label" for="email">Email</label><br>
+      <input class = "input" type="email" id = "email" name = "email" placeholder="Email"><br>
+    </br>
+      <label class = "label" for="pnumber">Phone Number</label><br>
+      <input class = "input" type="tel" id = "pnumber" name = "pnumber" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"><br>
+    </br>
+      <label for="password">Password</label><br>
+      <input class = "input" type="password" id = "password" name = "fpassword" placeholder="Password" ><br>
+    </br>
+      <label for="referral">Referral Phone or promo code (optional) </label><br>
+      <input class = "input" type="number" id = "referral" name = "referral" placeholder="Referral Phone or promo code (optional)"><br>
+    </br>
+      <label for="fhow"> How did you here about us (optional)</label><br>
+      <select  id="country" name="How did you here about us (optional)" placeholder="How did you here about us (optional)">
+        <option value="Facebook">
+          <option value="Twitter">
+          <option value="Instagram">
+          <option value="Friend/Family/CoWorker Referral">
+          <option value="Google Search">
+            <option value="Google Playstore">
+              <option value="Online Blog">
+                <option value="Local Newspaper">
+                  <option value="At an Event">
+                    <option value="Others">
+        </select>
+              </br>     
               <br><br>
-
-      <input type="submit" value="Create Account">
-      <p>Already have an account? Log in</p>
-       </div>
-      
-      
-    </form>
-    <h3>term</h3>
-    <p>sgskgmsgksmgslkgm</p><br>
-    <p>sgskgmsgksmgslkgm</p><br>
-    <p>sgskgmsgksmgslkgm</p><br><br>
-    <p>sgskgmsgksmgslkgm</p><br>
-    <p>sgskgmsgksmgslkgm</p><br>
-    <p>sgskgmsgksmgslkgm</p><br>
-    <p>sgskgmsgksmgslkgm</p><br>
-    <p>sgskgmsgksmgslkgm</p><br><br>
-    <p>sgskgmsgksmgslkgm</p><br><br>
-    <p>sgskgmsgksmgslkgm</p><br><br>
-    <p>sgskgmsgksmgslkgm</p><br><br>
-    <p>sgskgmsgksmgslkgm</p><br><br>
+              <input class = "button" type="submit" value="Create Account">
+                  </div>
+              
+               </div>              
+            </form>
+            
+            <p align="center"><b><a href="default.asp" target="_blank">Already have an account? Log in</a></b></p>
 </body>
 </html>
